@@ -1,0 +1,14 @@
+{
+  "name": "anki-import-preflight",
+  "version": "0.1.0",
+  "description": "Offline preflight reports for Anki text imports, before opening your collection.",
+  "type": "module",
+  "license": "MIT",
+  "author": "DrEli7",
+  "engines": { "node": ">=22" },
+  "bin": { "anki-import-preflight": "src/cli.mjs" },
+  "exports": "./src/index.mjs",
+  "files": ["src", "README.md", "LICENSE", "examples"],
+  "scripts": { "test": "node --test", "demo": "node src/cli.mjs examples/incoming.csv --fields 2 --delimiter comma --existing examples/existing.csv --media-dir examples/media --fail-on never" },
+  "dependencies": { "csv-parse": "7.0.3", "htmlparser2": "12.0.0" }
+}
